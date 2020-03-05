@@ -3,29 +3,26 @@ import { render } from 'react-dom';
 //import './index.css';
 //import App from './App';
 //import * as serviceWorker from './serviceWorker';
+const Book = ({title, author, pages})  => {
+  return (
+    <section>
+      <h2>{title}</h2>
+      <h2>by: {author}</h2>
+      <h2>Pages: {pages} pages</h2>
+    </section>
+  )
+}
+
 const Library = ()  => {
   return (
     <div>
-      Welcome to the Library
+      <Book title="The Sun Rises" author="Ernest Hemingway" pages={260}/>
     </div>
   )
 }
 
-var style = {
-  backgroundColor: 'orange',
-  color: 'white',
-  fontFamily: 'Arial'
-}
-
-const title = React.createElement(
-  'h1',
-  {id: 'title', className: 'header', style: style},
-  'Hello World'
-)
-
 render(
   <div>
-    <Library />
     <Library />
   </div>
   , document.getElementById('root'));
